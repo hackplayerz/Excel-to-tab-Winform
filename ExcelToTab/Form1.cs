@@ -121,7 +121,6 @@ namespace ExcelToTab
                 var path = "./" + Path.GetFileNameWithoutExtension(file) + "/text";
                 var directory = new DirectoryInfo(path);
 
-                // If already directory exist, delete and recreate directory
                 if (!directory.Exists)
                 {
                     directory.Create();
