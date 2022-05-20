@@ -99,23 +99,6 @@ namespace ExcelToTab
         private static bool ExportExcelToTabText(string file, string sheetName)
         {
             var output = sheetName + ".txt"; // Export file name
-            /*StreamWriter sw = null;
-			try
-			{
-				path = "./" + Path.GetFileNameWithoutExtension(file) + "/text";
-				DirectoryInfo directory = new DirectoryInfo(path);
-				if (!directory.Exists)
-				{
-					directory.Create();
-				}
-
-				sw = new StreamWriter(path + "/" + output);
-			}
-			catch (Exception execption)
-			{
-				System.Console.WriteLine(execption.ToString());
-				return;
-			}*/
 
             DataRow[] dataRow = ExcelDataReader.GetExcelSheetDataRow(file, sheetName, out var rowCount, out var colCount);
 
